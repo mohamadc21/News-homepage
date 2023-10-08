@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | News homepage</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="script.js" defer></script>
+  <style>
+    @font-face {
+      font-family: Inter;
+      src: url('assets/fonts/static/Inter-Regular.ttf');
+      font-weight: 400;
+    }
+    @font-face {
+      font-family: Inter;
+      src: url('assets/fonts/static/Inter-Bold.ttf');
+      font-weight: 700;
+    }
+    @font-face {
+      font-family: Inter;
+      src: url('assets/fonts/static/Inter-ExtraBold.ttf');
+      font-weight: 800;
+    }
+    * {
+      font-family: Inter;
+    }
+  </style>
+</head>
+<body class="flex items-center justify-center p-6 text-[15px]">
+  <div class="w-full max-w-4xl">
+    <nav class="flex items-center justify-between mb-8 relative">
+      <div class="bg-[url('assets/images/logo.svg')] w-16 h-10 bg-cover scale-90"></div>
+      <ul id="menu-links" class="flex gap-6 max-[600px]:fixed max-[600px]:top-0 max-[600px]:right-full transition transition-700 max-[600px]:flex-col max-[600px]:bg-white max-[600px]:w-[250px] max-[600px]:p-5 max-[600px]:min-h-screen max-[600px]:justify-center max-[600px]:text-lg z-10">
+        <button id="close" class="w-8 h-8 bg-[url('assets/images/icon-menu-close.svg')] bg-no-repeat absolute top-6 right-4 hidden max-[600px]:block"></button>
+        <li><a href="#" class="text-[hsl(236,13%,42%)] hover:text-[hsl(5,85%,63%)] transition">Home</a></li>
+        <li><a href="#" class="text-[hsl(236,13%,42%)] hover:text-[hsl(5,85%,63%)] transition">New</a></li>
+        <li><a href="#" class="text-[hsl(236,13%,42%)] hover:text-[hsl(5,85%,63%)] transition">Popular</a></li>
+        <li><a href="#" class="text-[hsl(236,13%,42%)] hover:text-[hsl(5,85%,63%)] transition">Trending</a></li>
+        <li><a href="#" class="text-[hsl(236,13%,42%)] hover:text-[hsl(5,85%,63%)] transition">Catrgories</a></li>
+      </ul>
+      <button id="menubar" class="w-10 h-5 bg-[url('assets/images/icon-menu.svg')] bg-no-repeat hidden max-[600px]:block outline-none"></button>
+    </nav>
+    <main class="flex gap-6 max-[700px]:flex-wrap">
+      <section class="w-[65%] flex flex-col gap-6 max-[700px]:w-full">
+        <img src="assets/images/image-web-3-desktop.jpg" alt="image">
+        <div class="flex gap-8 justify-between max-[700px]:flex-col">
+          <div class="flex flex-col gap-2 text-5xl font-extrabold w-full max-[850px]:text-4xl">
+            <h1>The Bright</h1>
+            <h1>Future of</h1>
+            <h1>Web 3.0?</h1>
+          </div>
+          <div class="w-full">
+            <p class="text-[hsl(236,13%,42%)]">We dive into next evolution of web that claims to put the power of the platforms back into the hands of the people. But is it realy fulfilling its promise?</p>
+            <button class="mt-8 p-3 w-44 font-bold bg-[hsl(5,85%,63%)] tracking-[2px] text-white hover:opacity-90 transition">READ MORE</button>
+          </div>
+        </div>
+      </section>
+      <aside class="w-[35%] bg-[hsl(240,100%,5%)] text-white pt-6 p-4 flex flex-col gap-6 max-[700px]:w-full">
+        <h1 class="text-[hsl(35,77%,62%)] text-3xl font-bold">New</h1>
+        <div class="border-b pb-6">
+          <a href="#" class="font-bold mb-2 transition hover:text-[hsl(35,77%,62%)]">Hydrogen VS Electric Cars</a>
+          <p class="text-xs leading-5 text-[hsl(233,8%,79%)]">Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+        <div class="border-b pb-6">
+          <a href="#" class="font-bold mb-2 transition hover:text-[hsl(35,77%,62%)]">The Downsides of AI Artistry</a>
+          <p class="text-xs leading-5 text-[hsl(233,8%,79%)]">What are the possible adverse effects of on-demand AI image generation?</p>
+        </div>
+        <div>
+          <a href="#" class="font-bold mb-2 transition hover:text-[hsl(35,77%,62%)]">Is VC Funding Drying Up?</a>
+          <p class="text-xs leading-5 text-[hsl(233,8%,79%)]">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </div>
+      </aside>
+    </main>
+    <footer class="mt-10 flex gap-4 max-sm:flex-col">
+      <div class="flex gap-4 max-[850px]:flex-col">
+        <img class="object-cover" src="assets/images/image-retro-pcs.jpg" alt="pc" width="70">
+        <div class="flex flex-col overflow-hidden justify-between">
+          <h1 class="text-[hsl(233,8%,79%)] font-bold text-2xl">01</h1>
+          <a href="#" class="font-bold truncate transition hover:text-[hsl(5,85%,63%)]">Reviving Retro PCs</a>
+          <p class="mt-1 text-xs text-[hsl(236,13%,42%)]">What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+      <div class="flex gap-4 max-[850px]:flex-col">
+        <img class="object-cover" src="assets/images/image-top-laptops.jpg" alt="pc" width="70">
+        <div class="flex flex-col overflow-hidden justify-between">
+          <h1 class="text-[hsl(233,8%,79%)] font-bold text-2xl">02</h1>
+          <a href="#" class="font-bold truncate transition hover:text-[hsl(5,85%,63%)]">Top 10 Laptops of 2022</a>
+          <p class="mt-1 text-xs text-[hsl(236,13%,42%)]">Our best picks for various needs and budgets</p>
+        </div>
+      </div>
+      <div class="flex gap-4 max-[850px]:flex-col">
+        <img class="object-cover" src="assets/images/image-gaming-growth.jpg" alt="pc" width="70">
+        <div class="flex flex-col overflow-hidden justify-between">
+          <h1 class="text-[hsl(233,8%,79%)] font-bold text-2xl">03</h1>
+          <a href="#" class="font-bold truncate transition hover:text-[hsl(5,85%,63%)]">The Growth of Gaming</a>
+          <p class="mt-1 text-xs text-[hsl(236,13%,42%)]">How the pandemic has sparked fresh oppotunities</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div id="overlay" class="fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.7)] hidden"></div>
+</body>
+</html>
